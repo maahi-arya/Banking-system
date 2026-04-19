@@ -20,6 +20,9 @@ const transactionRouter = require("./routes/transaction.routes");
 app.get("/",(req,res)=>{
     res.send("Ledger service is up and running")
 })
+app.get("/check",(req,res)=>{
+    res.send("Api working fine");
+})
 app.use("/api/auth", authRouter)
 app.use("/api/accounts",accountRouter)
 app.use("/api/transactions", transactionRouter)
